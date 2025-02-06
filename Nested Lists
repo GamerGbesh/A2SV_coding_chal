@@ -1,0 +1,17 @@
+if __name__ == '__main__':
+    records = []
+    scores = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        records.append([name, score])
+        scores.append(score)
+    min_score = min(scores)
+    scores = sorted(scores)
+    while min_score in scores:
+        scores.remove(min_score)
+    for name, score in sorted(records, key=lambda x=name: x): 
+        if score == scores[0]:
+            print(name)
+        
+        
