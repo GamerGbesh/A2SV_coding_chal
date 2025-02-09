@@ -1,0 +1,8 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    rem_dup = set(arr)
+    arr = list(rem_dup)
+    arr.sort()
+    print(arr[-2])
+    
