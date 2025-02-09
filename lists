@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())
+    lst = []
+    for _ in range(n):
+        op = input()
+        if "insert" in op:
+            lst.insert(int(op.split(" ")[1]), int(op.split(" ")[-1]))
+        elif "print" in op:
+            print(lst)
+        elif "remove" in op:
+            lst.remove(int(op.split(" ")[-1]))
+        elif "append" in op:
+            lst.append(int(op.split(" ")[-1]))
+        elif "sort" in op:
+            lst.sort()
+        elif "pop" in op:
+            lst.pop()
+        elif "reverse" in op:
+            lst = list(reversed(lst))
